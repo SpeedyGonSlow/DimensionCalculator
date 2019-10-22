@@ -1,0 +1,100 @@
+﻿<Page
+    x:Class="DimensionCalculator.GUIs.HomeGUI"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DimensionCalculator.GUIs"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Width="1000" Height="630">
+
+    <StackPanel Orientation="Horizontal"
+                Margin="0">
+        <StackPanel Orientation="Vertical"
+                    Margin="25">
+            <Button Name="ButtonBasicCalculator"
+                    Width="200"
+                    Height="210"
+                    Margin="50,50,25,25"
+                    Click="ButtonBasicCalculator_Click">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="ms-appx:///Icons/Calculator.png"
+                           Height="160"/>
+                    <TextBlock Text="Basic Calculator" HorizontalTextAlignment="Center" Margin="0,10,0,0"
+                               HorizontalAlignment="Center" FontFamily="Arial" FontSize="18"/>
+                </StackPanel>
+            </Button>
+            
+            <Button Name="ButtonExchange"
+                    Width="200"
+                    Height="210"
+                    Margin="50,25,25,50"
+                    Click="ButtonExchange_Click">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="ms-appx:///Icons/Exchange.png"
+                           Height="160" />
+                    <TextBlock Text="Exchange Rate" HorizontalTextAlignment="Center" Margin="0,10,0,0"
+                               HorizontalAlignment="Center" FontFamily="Arial" FontSize="18"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        
+        <StackPanel Orientation="Vertical"
+                    Margin="25">
+            <Button Name="ButtonInterest"
+                    Width="200"
+                    Height="210"
+                    Margin="25,50,25,25"
+                    Click="ButtonInterest_Click">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="ms-appx:///Icons/Interest.png"
+                           Height="160" />
+                    <TextBlock Text="Interest Calculator" HorizontalTextAlignment="Center" Margin="0,10,0,0"
+                               HorizontalAlignment="Center" FontFamily="Arial" FontSize="18"/>
+                </StackPanel>
+            </Button>
+            
+            <Button Name="ButtonMass"
+                    Width="200"
+                    Height="210"
+                    Margin="25,25,25,50"
+                    Click="ButtonMass_Click">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="ms-appx:///Icons/Mass.jpg"
+                           Height="160"/>
+                    <TextBlock Text="Mass Converter" HorizontalTextAlignment="Center" Margin="0,10,0,0"
+                               HorizontalAlignment="Center" FontFamily="Arial" FontSize="18"/>
+                </StackPanel>
+            </Button>
+
+        </StackPanel>
+        
+        <StackPanel Orientation="Vertical"
+                    Margin="25">
+            <Button Name="ButtonBubbleSort"
+                    Width="200"
+                    Height="210"
+                    Margin="25,50,50,25"
+                    Click="ButtonBubbleSort_Click">
+            <StackPanel Orientation="Vertical">
+                <Image Source="ms-appx:///Icons/Bubbles.png"
+                       Height="160"/>
+                    <TextBlock Text="Bubble Sort" HorizontalTextAlignment="Center" Margin="0,10,0,0"
+                           HorizontalAlignment="Center" FontFamily="Arial" FontSize="18"/>
+            </StackPanel>
+            </Button>
+            
+            <Button Name="ButtonQuickSort"
+                    Width="200"
+                    Height="210"
+                    Margin="25,25,50,50"
+                    Click="ButtonQuickSort_Click">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="ms-appx:///Icons/Quick.png"
+                           Height="160"/>
+                    <TextBlock Text="Quick Sort" HorizontalTextAlignment="Center" Margin="0,10,0,0"
+                               HorizontalAlignment="Center" FontFamily="Arial" FontSize="18"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+    </StackPanel>
+</Page>

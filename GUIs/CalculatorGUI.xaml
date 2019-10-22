@@ -1,0 +1,181 @@
+﻿<Page
+    x:Class="DimensionCalculator.GUIs.CalculatorGUI"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DimensionCalculator.GUIs"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Width="1000" Height="630">
+
+    <StackPanel>
+        <StackPanel Orientation="Vertical">
+            <TextBlock x:Name="TxtBlckFunction"
+                       Width="870"
+                       Height="40"
+                       HorizontalAlignment="Left"
+                       Margin="20,60,0,0"
+                       FontFamily="Arial" FontSize="24"
+                       TextAlignment="Right"/>
+            <TextBox x:Name="TxtBxInput"
+                     Width="870"
+                     Height="50"
+                     HorizontalAlignment="Left"
+                     Margin="20,0,0,10"
+                     FontFamily="Arial" FontSize="24"
+                     TextAlignment="Right" 
+                     InputScope="Number"
+                     PlaceholderText="Typed Text Appear Here"
+                     MaxLength="32" IsReadOnly="True"/>
+            <StackPanel Orientation="Horizontal">
+                <Button Name="Factorial"
+                        Content="n!"
+                        Width="100"
+                        Height="100"
+                        Margin="20,0,5,5"
+                        Click="Factorial_Click" FontFamily="Arial" FontSize="36"/>
+                <Button Name="Persentage"
+                        Content="%"
+                        Width="100"
+                        Height="100"
+                        Margin="5,0,5,5"
+                        Click="Persentage_Click" FontFamily="Arial" FontSize="36"/>
+                <Button Name="NumSeven"
+                        Content="7"
+                        Width="100"
+                        Height="100"
+                        Margin="5,0,5,5"
+                        Click="NumSeven_Click" FontFamily="Arial" FontSize="36"/>
+                <Button Name="NumEight"
+                        Content="8"
+                        Width="100"
+                        Height="100"
+                        Margin="5,0,5,5"
+                        Click="NumEight_Click" FontFamily="Arial" FontSize="36"/>
+                <Button Name="NumNine"
+                        Content="9"
+                        Width="100"
+                        Height="100"
+                        Margin="5,0,5,5"
+                        Click="NumNine_Click" FontFamily="Arial" FontSize="36"/>
+                <Button Name="Backspace"
+                        Content="DEL"
+                        Width="100"
+                        Height="100"
+                        Margin="5,0,5,5"
+                        Click="Backspace_Click" FontFamily="Arial" FontSize="36"/>
+                <Button Name="Multiply"
+                        Content="×"
+                        Width="100"
+                        Height="100"
+                        Margin="5,0,5,5"
+                        Click="Multiply_Click" FontFamily="Arial" FontSize="36"/>
+                <Button Name="Divide"
+                        Content="÷"
+                        Width="100"
+                        Height="100"
+                        Margin="5,0,5,5"
+                        Click="Divide_Click" FontFamily="Arial" FontSize="36"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Name="SquareRoot"
+                        Content="√"
+                        Width="100"
+                        Height="100"
+                        Margin="20,5,5,5"
+                        Click="SquareRoot_Click" FontFamily="Arial" FontSize="36"/>
+                <Button Name="NumZero"
+                        Content="0"
+                        Width="100"
+                        Height="100"
+                        Margin="5"
+                        Click="NumZero_Click" FontFamily="Arial" FontSize="36"/>
+                <Button Name="NumFour"
+                        Content="4"
+                        Width="100"
+                        Height="100"
+                        Margin="5"
+                        Click="NumFour_Click" FontFamily="Arial" FontSize="36"/>
+                <Button Name="NumFive"
+                        Content="5"
+                        Width="100"
+                        Height="100"
+                        Margin="5"
+                        Click="NumFive_Click" FontFamily="Arial" FontSize="36"/>
+                <Button Name="NumSix"
+                        Content="6"
+                        Width="100"
+                        Height="100"
+                        Margin="5"
+                        Click="NumSix_Click" FontFamily="Arial" FontSize="36"/>
+                <Button Name="AllClear"
+                        Content="AC"
+                        Width="100"
+                        Height="100"
+                        Margin="5"
+                        Click="AllClear_Click" FontFamily="Arial" FontSize="36"/>
+                <Button Name="Minus"
+                        Content="-"
+                        Width="100"
+                        Height="100"
+                        Margin="5"
+                        Click="Minus_Click" FontFamily="Arial" FontSize="36"/>
+                <Button Name="Plus"
+                        Content="+"
+                        Width="100"
+                        Height="100"
+                        Margin="5"
+                        Click="Plus_Click" FontFamily="Arial" FontSize="36"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Name="PI"
+                        Content="π"
+                        Width="100"
+                        Height="100"
+                        Margin="20,5,5,5"
+                        Click="PI_Click" FontFamily="Arial" FontSize="36"/>
+                <Button Name="Point"
+                        Content="."
+                        Width="100"
+                        Height="100"
+                        Margin="5"
+                        Click="Point_Click" FontFamily="Arial" FontSize="36"/>
+                <Button Name="NumOne"
+                        Content="1"
+                        Width="100"
+                        Height="100"
+                        Margin="5"
+                        Click="NumOne_Click" FontFamily="Arial" FontSize="36"/>
+                <Button Name="NumTwo"
+                        Content="2"
+                        Width="100"
+                        Height="100"
+                        Margin="5"
+                        Click="NumTwo_Click" FontFamily="Arial" FontSize="36"/>
+                <Button Name="NumThree"
+                        Content="3"
+                        Width="100"
+                        Height="100"
+                        Margin="5"
+                        Click="NumThree_Click" FontFamily="Arial" FontSize="36"/>
+                <Button Name="XPowerY"
+                        Content="^"
+                        Width="100"
+                        Height="100"
+                        Margin="5"
+                        Click="XPowerY_Click" FontFamily="Arial" FontSize="36"/>
+                <Button Name="Inverse"
+                        Content="1/x"
+                        Width="100"
+                        Height="100"
+                        Margin="5"
+                        Click="Inverse_Click" FontFamily="Arial" FontSize="36"/>
+                <Button Name="Equal"
+                        Content="="
+                        Width="100"
+                        Height="100"
+                        Margin="5"
+                        Click="Equal_Click" FontFamily="Arial" FontSize="36"/>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+</Page>

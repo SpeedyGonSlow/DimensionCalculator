@@ -1,0 +1,165 @@
+﻿<Page
+    x:Class="DimensionCalculator.GUIs.InterestGUI"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DimensionCalculator.GUIs"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Width="1000" Height="630">
+
+    <StackPanel Orientation="Horizontal">
+        <StackPanel Orientation="Vertical">
+            <TextBox x:Name="TxtBxStartAmout"
+                     Width="400"
+                     Height="40"
+                     Margin="15,150,15,0" FontFamily="Arial" FontSize="24"
+                     InputScope="Number"
+                     MaxLength="32"
+                     PlaceholderText="Enter the Start Amout Here"
+                     IsReadOnly="True" PointerEntered="TxtBxStartAmout_PointerEntered"/>
+            <TextBox x:Name="TxtBxInterestRate"
+                     Width="400"
+                     Height="40"
+                     Margin="15,10,15,0" FontFamily="Arial" FontSize="24"
+                     InputScope="Number"
+                     MaxLength="32"
+                     PlaceholderText="Enter the Interest Rate Here"
+                     IsReadOnly="True" PointerEntered="TxtBxInterestRate_PointerEntered"/>
+            <ComboBox x:Name="CmbBxTimesCompounded"
+                      Height="40"
+                      Width="400"
+                      Margin="15,10,15,0" FontFamily="Arial" FontSize="24"
+                      SelectedIndex="0">
+                <ComboBoxItem Name="DefaultItem1" Content=">Select Compound Rate"/>
+                <ComboBoxItem Name="DayItem1" Content="Dayly - 365"/>
+                <ComboBoxItem Name="WeekItem1" Content="Weekly - 52"/>
+                <ComboBoxItem Name="MonthItem1" Content="Monthly - 12"/>
+                <ComboBoxItem Name="QuaterItem1" Content="Quaterly - 4"/>
+                <ComboBoxItem Name="HalfYearItem1" Content="Halfyearly - 2"/>
+                <ComboBoxItem Name="YearItem1" Content="Yearly - 1"/>
+            </ComboBox>
+            <TextBox x:Name="TxtBxPeriod"
+                     Width="400"
+                     Height="40"
+                     Margin="15,10,15,0" FontFamily="Arial" FontSize="24"
+                     InputScope="Number"
+                     MaxLength="32"
+                     PlaceholderText="Enter the Period Here"
+                     IsReadOnly="True" PointerEntered="TxtBxPeriod_PointerEntered"/>
+            <Button Name="BtnCalculateInterest"
+                        Content="Calculate"
+                        Width="400"
+                        Height="60"
+                        Click="BtnCalculateInterest_Click"
+                        Margin="15,20,15,5" FontFamily="Arial" FontSize="24"/>
+            <TextBox x:Name="TxtBxEndAmount"
+                     Width="400"
+                     Height="40"
+                     Margin="15,20,15,0" FontFamily="Arial" FontSize="24"
+                     InputScope="Number"
+                     MaxLength="32"
+                     PlaceholderText="Calculated Value appear Here"
+                     IsReadOnly="True"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Button Name="Point"
+                        Content="."
+                        Width="100"
+                        Height="100"
+                        Click="Point_Click"
+                        Margin="170,80,5,5" FontFamily="Arial" FontSize="36"/>
+                <Button Name="AllClear"
+                        Content="AC"
+                        Width="100"
+                        Height="100"
+                        Click="AllClear_Click"
+                        Margin="5,80,5,5" FontFamily="Arial" FontSize="36"/>
+                <Button Name="Backspace"
+                        Content="DEL"
+                        Width="100"
+                        Height="100"
+                        Click="Backspace_Click"
+                        Margin="5,80,5,5" FontFamily="Arial" FontSize="36"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Name="NumTrZero"
+                        Content="000"
+                        Width="100"
+                        Height="100"
+                        Click="NumTrZero_Click"
+                        Margin="60,5,5,5" FontFamily="Arial" FontSize="36"/>
+                <Button Name="NumSeven"
+                        Content="7"
+                        Width="100"
+                        Height="100"
+                        Click="NumSeven_Click"
+                        Margin="5" FontFamily="Arial" FontSize="36"/>
+                <Button Name="NumEight"
+                        Content="8"
+                        Width="100"
+                        Height="100"
+                        Click="NumEight_Click"
+                        Margin="5" FontFamily="Arial" FontSize="36"/>
+                <Button Name="NumNine"
+                        Content="9"
+                        Width="100"
+                        Height="100"
+                        Click="NumNine_Click"
+                        Margin="5" FontFamily="Arial" FontSize="36"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Name="NumDuZero"
+                        Content="00"
+                        Width="100"
+                        Height="100"
+                        Click="NumDuZero_Click"
+                        Margin="60,5,5,5" FontFamily="Arial" FontSize="36"/>
+                <Button Name="NumFour"
+                        Content="4"
+                        Width="100"
+                        Height="100"
+                        Click="NumFour_Click"
+                        Margin="5" FontFamily="Arial" FontSize="36"/>
+                <Button Name="NumFive"
+                        Content="5"
+                        Width="100"
+                        Height="100"
+                        Click="NumFive_Click"
+                        Margin="5" FontFamily="Arial" FontSize="36"/>
+                <Button Name="NumSix"
+                        Content="6"
+                        Width="100"
+                        Height="100"
+                        Click="NumSix_Click"
+                        Margin="5" FontFamily="Arial" FontSize="36"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Name="NumZero"
+                        Content="0"
+                        Width="100"
+                        Height="100"
+                        Click="NumZero_Click"
+                        Margin="60,5,5,5" FontFamily="Arial" FontSize="36"/>
+                <Button Name="NumOne"
+                        Content="1"
+                        Width="100"
+                        Height="100"
+                        Click="NumOne_Click"
+                        Margin="5" FontFamily="Arial" FontSize="36"/>
+                <Button Name="NumTwo"
+                        Content="2"
+                        Width="100"
+                        Height="100"
+                        Click="NumTwo_Click"
+                        Margin="5" FontFamily="Arial" FontSize="36"/>
+                <Button Name="NumThree"
+                        Content="3"
+                        Width="100"
+                        Height="100"
+                        Click="NumThree_Click"
+                        Margin="5" FontFamily="Arial" FontSize="36"/>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+</Page>

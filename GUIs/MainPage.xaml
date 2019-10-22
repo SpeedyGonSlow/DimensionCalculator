@@ -1,0 +1,123 @@
+﻿<Page x:Class="DimensionCalculator.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:DimensionCalculator"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d">
+
+    <NavigationView Name="NavView"
+                    IsSettingsVisible="False"
+                    Canvas.ZIndex="0">
+
+        <NavigationView.Background>
+            <ImageBrush ImageSource="ms-appx:///Backgrounds/Background6.jpg" />
+        </NavigationView.Background>
+
+        <NavigationView.MenuItems>
+            <NavigationViewItem x:Uid="HomeNavItem"
+                                Name="NavHomeGUI"
+                                Content="Home"
+                                Icon="Home"
+                                Tapped="NavHomeGUI_Tapped"
+                                ToolTipService.ToolTip="Navigate Home" />
+
+            <NavigationViewItemHeader Content="      Calculators" />
+
+            <NavigationViewItem x:Uid="CalculatorNavItem"
+                                Name="NavBasicCalculatorGUI"
+                                Content="Basic"
+                                Icon="Calculator"
+                                Tapped="NavBasicCalculatorGUI_Tapped"
+                                ToolTipService.ToolTip="Basic Calculator" />
+            <NavigationViewItem x:Uid="InterestNavItem"
+                                Name="NavInterestGUI"
+                                Content="‰    Interest"
+                                Tapped="NavInterestGUI_Tapped"
+                                ToolTipService.ToolTip="Calculate Interest" />
+
+            <NavigationViewItemHeader Content="      Converters" />
+
+            <NavigationViewItem x:Uid="ExchangeNavItem"
+                                Name="NavExchangeGUI"
+                                Content="Exchange"
+                                Icon="Sync"
+                                Tapped="NavExchangeGUI_Tapped"
+                                ToolTipService.ToolTip="Exchange Values" />
+            <NavigationViewItem x:Uid="MassNavItem"
+                                Name="NavMassGUI"
+                                Content="Mass"
+                                Icon="Tag"
+                                Tapped="NavMassGUI_Tapped"
+                                ToolTipService.ToolTip="Mass Conversion" />
+
+            <NavigationViewItemHeader Content="      Generators" />
+
+            <NavigationViewItem x:Uid="BubbleSortNavItem"
+                                Name="NavBubbleSortGUI"
+                                Content="Bubble Sort"
+                                Icon="Sort"
+                                Tapped="NavBubbleSortGUI_Tapped"
+                                ToolTipService.ToolTip="Bubble Sort" />
+            <NavigationViewItem x:Uid="QuickSortNavItem"
+                                Name="NavQuickSortGUI"
+                                Content="Quick Sort"
+                                Icon="Switch"
+                                Tapped="NavQuickSortGUI_Tapped"
+                                ToolTipService.ToolTip="Quick Sort" />
+        </NavigationView.MenuItems>
+
+        <NavigationView.HeaderTemplate>
+            <DataTemplate>
+                <Grid Margin="24,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Name="TextBlockHeader"
+                               Style="{StaticResource TitleTextBlockStyle}"
+                               FontSize="28"
+                               VerticalAlignment="Center"
+                               Text="DimensionCalculator" />
+                    <CommandBar Grid.Column="1"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Top"
+                                DefaultLabelPosition="Right"
+                                Background="Transparent">
+                        <AppBarButton Name="ButtonBack"
+                                      Icon="Back"
+                                      Click="ButtonBack_Click"
+                                      ToolTipService.ToolTip="Navigate Back" />
+                        <AppBarButton Name="ButtonRefresh"
+                                      Icon="Refresh"
+                                      Click="ButtonRefresh_Click"
+                                      ToolTipService.ToolTip="Refresh Frame" />
+                        <AppBarButton Name="ButtonForward"
+                                      Icon="Forward"
+                                      Click="ButtonForward_Click"
+                                      ToolTipService.ToolTip="Navigate Forward" />
+                    </CommandBar>
+                </Grid>
+            </DataTemplate>
+        </NavigationView.HeaderTemplate>
+
+        <NavigationView.PaneFooter>
+            <NavigationViewItem x:Uid="AboutNavItem"
+                                Name="NavAboutGUI"
+                                Content="About"
+                                Icon="Important"
+                                Tapped="NavAboutGUI_Tapped" />
+        </NavigationView.PaneFooter>
+
+        <Frame x:Name="FocusFrame"
+               Margin="20">
+            <Frame.ContentTransitions>
+                <TransitionCollection>
+                    <NavigationThemeTransition />
+                </TransitionCollection>
+            </Frame.ContentTransitions>
+        </Frame>
+
+    </NavigationView>
+
+</Page>
